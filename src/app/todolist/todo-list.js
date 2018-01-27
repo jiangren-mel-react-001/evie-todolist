@@ -1,20 +1,10 @@
 import React from 'react';
+import { ToDoItem } from './todo-item';
 
 export function TodoList(props) {
     const itemList = props.items.map((aItem, index) => (
         <li key={index}>
-            {aItem.done ? (
-                <div>
-                    <del>{aItem.name}</del>
-                    <button onClick={() => props.onRemoveTodo(aItem)}>Delete</button>
-                </div>
-            ) : (
-                <div>
-                    {aItem.name}
-                    <button onClick={() => props.onDoneTodo(aItem)}>Done</button>
-                    <button onClick={() => props.onRemoveTodo(aItem)}>Delete</button>
-                </div>
-            )}
+            <ToDoItem aItem={aItem} {...props} />
         </li>
     ));
     return (

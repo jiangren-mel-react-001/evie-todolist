@@ -3,6 +3,9 @@ import { TodoList } from './todo-list';
 import { AddTodo } from './add-todo';
 import { TodoModel } from './model';
 
+// this class deals with MODEL (a list item) processing (CRUD)
+// all DATA processing is here within this class
+
 export class TodoContainer extends React.Component {
     constructor() {
         super();
