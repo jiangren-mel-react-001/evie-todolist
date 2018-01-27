@@ -11,7 +11,7 @@ export function TodoList(props) {
             ) : (
                 <div>
                     {aItem.name}
-                    <button onClick={() => props.onDoneTodo(aItem)}>Do it</button>
+                    <button onClick={() => props.onDoneTodo(aItem)}>Done</button>
                     <button onClick={() => props.onRemoveTodo(aItem)}>Delete</button>
                 </div>
             )}
